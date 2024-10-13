@@ -10,9 +10,7 @@ This repository contains implementations of various data structures and algorith
 - [Data Structures](#data-structures)
 - [Algorithms](#algorithms)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 
@@ -68,3 +66,11 @@ To get a local copy of this repository, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/dsa-python.git
+![image](https://github.com/user-attachments/assets/dccd79a1-e0ff-4b55-b38a-91bea8d159dc)
+![image](https://github.com/user-attachments/assets/a721dfe2-bc9a-41dc-818f-172d72bc27a3)
+![image](https://github.com/user-attachments/assets/10aeef93-775e-487f-992b-c795bc561cfe)
+
+
+
+
+   
