@@ -1,0 +1,55 @@
+# Creating sets
+fruits = {"apple", "banana", "cherry"}
+numbers = set([1, 2, 3, 4, 5])
+mixed_set = {1, "hello", (1, 2, 3)}
+
+# Note: Sets cannot contain mutable elements like lists or dictionaries
+
+# Adding elements
+fruits.add("date")
+print(fruits)  # Output might be: {'cherry', 'apple', 'banana', 'date'}
+
+# Removing elements
+fruits.remove("banana")  # Raises KeyError if not found
+fruits.discard("grape")  # Doesn't raise error if not found
+popped = fruits.pop()    # Removes and returns an arbitrary element
+print(fruits)
+
+# Set operations
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+union = set1 | set2  # or set1.union(set2)
+intersection = set1 & set2  # or set1.intersection(set2)
+difference = set1 - set2  # or set1.difference(set2)
+symmetric_difference = set1 ^ set2  # or set1.symmetric_difference(set2)
+
+print(f"Union: {union}")
+print(f"Intersection: {intersection}")
+print(f"Difference: {difference}")
+print(f"Symmetric Difference: {symmetric_difference}")
+
+# Checking membership
+print("apple" in fruits)  # Output: True or False depending on earlier operations
+
+# Set comprehensions
+squares = {x**2 for x in range(10)}
+print(squares)
+
+# Frozen sets (immutable sets)
+immutable_set = frozenset([1, 2, 3])
+# immutable_set.add(4)  # This would raise an AttributeError
+
+# Set methods
+set1.update(set2)  # Adds elements from set2 to set1
+set1.clear()       # Removes all elements from the set
+
+# Subset and superset
+set_a = {1, 2, 3}
+set_b = {1, 2, 3, 4, 5}
+print(set_a.issubset(set_b))   # Output: True
+print(set_b.issuperset(set_a)) # Output: True
+
+# Disjoint sets
+set_c = {6, 7, 8}
+print(set_a.isdisjoint(set_c)) # Output: True
