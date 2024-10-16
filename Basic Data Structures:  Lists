@@ -1,0 +1,57 @@
+# Creating lists
+fruits = ['apple', 'banana', 'cherry']
+numbers = [1, 2, 3, 4, 5]
+mixed = [1, 'hello', 3.14, True]
+
+# Accessing elements
+print(fruits[0])  # Output: apple
+print(fruits[-1])  # Output: cherry (last element)
+
+# Slicing
+print(numbers[1:4])  # Output: [2, 3, 4]
+print(numbers[:3])   # Output: [1, 2, 3]
+print(numbers[2:])   # Output: [3, 4, 5]
+
+# Modifying lists
+fruits[1] = 'blueberry'
+print(fruits)  # Output: ['apple', 'blueberry', 'cherry']
+
+# List methods
+fruits.append('date')
+print(fruits)  # Output: ['apple', 'blueberry', 'cherry', 'date']
+
+fruits.insert(1, 'blackberry')
+print(fruits)  # Output: ['apple', 'blackberry', 'blueberry', 'cherry', 'date']
+
+popped = fruits.pop()
+print(popped)  # Output: date
+print(fruits)  # Output: ['apple', 'blackberry', 'blueberry', 'cherry']
+
+fruits.remove('blueberry')
+print(fruits)  # Output: ['apple', 'blackberry', 'cherry']
+
+# List operations
+combined = fruits + numbers
+print(combined)  # Output: ['apple', 'blackberry', 'cherry', 1, 2, 3, 4, 5]
+
+repeated = [1, 2] * 3
+print(repeated)  # Output: [1, 2, 1, 2, 1, 2]
+
+# List comprehensions
+squares = [x**2 for x in range(5)]
+print(squares)  # Output: [0, 1, 4, 9, 16]
+
+# Checking membership
+print('apple' in fruits)  # Output: True
+
+# List length
+print(len(fruits))  # Output: 3
+
+# Sorting
+numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
+numbers.sort()
+print(numbers)  # Output: [1, 1, 2, 3, 3, 4, 5, 5, 6, 9]
+
+# Reversing
+numbers.reverse()
+print(numbers)  # Output: [9, 6, 5, 5, 4, 3, 3, 2, 1, 1]
