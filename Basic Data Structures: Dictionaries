@@ -1,0 +1,55 @@
+# Creating dictionaries
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+# Accessing values
+print(person["name"])  # Output: Alice
+print(person.get("age"))  # Output: 30
+print(person.get("job", "Not specified"))  # Output: Not specified
+
+# Modifying dictionaries
+person["age"] = 31
+person["job"] = "Engineer"
+print(person)  # Output: {'name': 'Alice', 'age': 31, 'city': 'New York', 'job': 'Engineer'}
+
+# Removing items
+removed_city = person.pop("city")
+print(f"Removed: {removed_city}")  # Output: Removed: New York
+print(person)  # Output: {'name': 'Alice', 'age': 31, 'job': 'Engineer'}
+
+# Dictionary methods
+keys = person.keys()
+values = person.values()
+items = person.items()
+print(f"Keys: {keys}")
+print(f"Values: {values}")
+print(f"Items: {items}")
+
+# Checking membership
+print("name" in person)  # Output: True
+print("city" in person)  # Output: False
+
+# Dictionary comprehension
+squares = {x: x**2 for x in range(5)}
+print(squares)  # Output: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+# Merging dictionaries
+person_extra = {"hobbies": ["reading", "hiking"], "language": "English"}
+person.update(person_extra)
+print(person)
+
+# Nested dictionaries
+employees = {
+    "Alice": {"department": "Engineering", "salary": 75000},
+    "Bob": {"department": "Marketing", "salary": 65000}
+}
+print(employees["Alice"]["salary"])  # Output: 75000
+
+# Dictionary unpacking
+defaults = {"color": "red", "size": "medium"}
+preferences = {"size": "large", "material": "cotton"}
+combined = {**defaults, **preferences}
+print(combined)  # Output: {'color': 'red', 'size': 'large', 'material': 'cotton'}
