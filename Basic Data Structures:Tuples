@@ -1,0 +1,49 @@
+# Creating tuples
+coordinates = (3, 4)
+rgb = (255, 0, 128)
+mixed_tuple = (1, "hello", 3.14, True)
+single_element_tuple = (42,)  # Note the comma
+
+# Accessing elements
+print(coordinates[0])  # Output: 3
+print(rgb[-1])         # Output: 128
+
+# Tuple unpacking
+x, y = coordinates
+print(f"x: {x}, y: {y}")  # Output: x: 3, y: 4
+
+# Tuples are immutable
+# rgb[0] = 200  # This would raise a TypeError
+
+# Concatenating tuples
+combined = coordinates + rgb
+print(combined)  # Output: (3, 4, 255, 0, 128)
+
+# Repeating tuples
+repeated = coordinates * 3
+print(repeated)  # Output: (3, 4, 3, 4, 3, 4)
+
+# Tuple methods
+count = repeated.count(3)
+print(f"Count of 3: {count}")  # Output: Count of 3: 3
+
+index = rgb.index(128)
+print(f"Index of 128: {index}")  # Output: Index of 128: 2
+
+# Checking membership
+print(255 in rgb)  # Output: True
+
+# Tuple length
+print(len(mixed_tuple))  # Output: 4
+
+# Nested tuples
+matrix = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+print(matrix[1][1])  # Output: 5
+
+# Converting list to tuple and vice versa
+list_from_tuple = list(rgb)
+tuple_from_list = tuple([1, 2, 3])
+
+# Using tuples in a dictionary
+dict_with_tuple_keys = {(0, 0): 'origin', (1, 0): 'right', (0, 1): 'up'}
+print(dict_with_tuple_keys[(0, 1)])  # Output: up
