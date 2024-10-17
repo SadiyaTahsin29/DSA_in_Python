@@ -1,0 +1,4 @@
+hashmap = {'a': 1, 'b': 2}
+print(hashmap['a'])  # Output: 1
+hashmap['a'] = 10  # Update value
+print(hashmap)  # {'a': 10, 'b': 2}
