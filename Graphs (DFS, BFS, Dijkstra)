@@ -1,0 +1,27 @@
+Graph Representation using Adjacency List:
+python
+Copy code
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D'],
+    'C': ['A', 'D'],
+    'D': ['B', 'C']
+}
+
+BFS Example:
+python
+Copy code
+from collections import deque
+
+def bfs(graph, start):
+    visited = set()
+    queue = deque([start])
+
+    while queue:
+        node = queue.popleft()
+        if node not in visited:
+            visited.add(node)
+            print(node, end=" ")
+            queue.extend(graph[node] - visited)
+
+bfs({'A': {'B', 'C'}, 'B': {'A', 'D'}, 'C': {'A', 'D'}, 'D': {'B', 'C'}}, 'A')
